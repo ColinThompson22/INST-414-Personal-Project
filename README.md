@@ -56,6 +56,15 @@ An analysis of the factors that lead to the spread and belief of misinformation
     │
     └── plots.py                <- Code to create visualizations
 ```
+##Description
+This project was created to help analyze what factors are more likely to lead to the spread and greater belief in sources of misinformation.
+
+##Dependicies
+.pandas
+.seaborn
+.matplotlib
+.pointbiserialr from scipy.stats
+.mannwhitneyu from scipy.stats
 
 --------
 
