@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "Misinformation Analysis"
+version = "0.0.1"
+description = "An analysis of the factors that lead to the spread and belief of misinformation"
+authors = [
+  { name = "Colin Thompson" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+requires-python = "~=3.10.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["Misinformation Analysis"]
+include = ["pyproject.toml", "Misinformation Analysis/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["Misinformation Analysis"]
+force-sort-within-sections = true
+
