@@ -4,7 +4,6 @@
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
 </a>
 
-An analysis of the factors that lead to the spread and belief of misinformation
 
 ## Project Organization
 
@@ -67,6 +66,15 @@ This project was created to help analyze what factors are more likely to lead to
 .pointbiserialr from scipy.stats
 .mannwhitneyu from scipy.stats
 ```
+## Setting up the enviornment
+When it comes to setting the enviorment, you will want to read in the dataset. 
+The code to do this is:
+```
+import pandas as pd
+df= pd.read_csv("birds_arent_real_tweets.csv")
+df.head()
+```
+
 
 --------
 
