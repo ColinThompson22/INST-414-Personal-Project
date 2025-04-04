@@ -56,7 +56,7 @@
     └── plots.py                <- Code to create visualizations
 ```
 ## Description
-This project was created to help analyze what factors are more likely to lead to the spread and greater belief in sources of misinformation.
+This project was created to help analyze what factors are more likely to lead to the spread and greater belief in sources of misinformation. The data used for this project is twitter api data of user accounts that try to spread the belief that birds are not real. This project specifically uses data visualizations and hypothesis testing to analyze misinformation data, with the use of machine learning models to be used soon once I have completed sprint 3. 
 
 ## Dependicies
 ```
