@@ -67,8 +67,11 @@ This project was created to help analyze what factors are more likely to lead to
 .mannwhitneyu from scipy.stats
 ```
 ## Setting up the enviornment
-When it comes to setting the enviorment, you will want to read in the dataset. 
-The code to do this is:
+When it comes to setting the enviorment, you will first want to get the data. The link to the data is right below.
+```
+https://www.kaggle.com/code/venomsnake/aren-t-birds-real-examining-a-modern-conspiracy/input
+```
+After downloading the dataset you will want to read this dataset into your porgram. The code to do this is below.
 ```
 import pandas as pd
 df= pd.read_csv("birds_arent_real_tweets.csv")
