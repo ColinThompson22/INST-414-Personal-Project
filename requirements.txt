@@ -6,4 +6,11 @@ python-dotenv
 ruff
 tqdm
 typer
+pandas
+matplotlib
+seaborn
+pointbiserialr from scrip.py stats
+mannwhitneyu from scrpi.py stats
+statmodels.api
+poisson from statsmodels.formula.api
 -e .
