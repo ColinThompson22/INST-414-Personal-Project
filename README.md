@@ -65,6 +65,8 @@ This project was created to help analyze what factors are more likely to lead to
 .matplotlib
 .pointbiserialr from scipy.stats
 .mannwhitneyu from scipy.stats
+.statsmodels.api
+.poisson from statsmodels.formula.api
 ```
 ## Setting up the enviornment
 When it comes to setting the enviorment, you will first want to get the data. The link to the data is right below.
@@ -139,8 +141,6 @@ for col in acc_char_vars.columns:
   display(acc_char_vars[col].value_counts().reset_index())
 ```
 After the data is processed you can start the model evaluation process
-## Model Evaluation
-Coming Soon. No model was created in sprint 2
 # Reproducing Results
 To reproduce my visualizations and test results, you should start by checkin the basic summar staistics of your ata. You can do this through the code below
 ```
@@ -199,7 +199,15 @@ if p_value < 0.05:
 else:
     print("There is no significant correlation between being verified and the number of followers.")
 ```
-Once this is done, you have successfully analyzed the data and should have achieved the same results as myself. More information coming soon with Sprint 3. 
+Next, you will want to recreate the poisson model used as the last step in repoducing the results. To reproduce the Results follow the code from below:
+```
+import statsmodels.api as sm
+from statsmodels.formula.api import poisson
+df['user_verified'] = df['user_verified'].astype(int)
+poisson_model = poisson('favorites ~ user_verified', data=df).fit()
+print(poisson_model.summary())
+```
+Once this is done, you have successfully analyzed the data and should have achieved the same results as myself. For more specific information on parts, please check other sections of the rpository for my more specified code. 
 
 
 --------
