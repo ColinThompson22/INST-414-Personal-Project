@@ -13,6 +13,12 @@ app = typer.Typer()
 #Code for setup
 import pandas as pd
 df= pd.read_csv("birds_arent_real_tweets.csv")
+#code for using poisson model and getting results 
+import statsmodels.api as sm
+from statsmodels.formula.api import poisson
+df['user_verified'] = df['user_verified'].astype(int)
+poisson_model = poisson('favorites ~ user_verified', data=df).fit()
+print(poisson_model.summary())
 
 
 if __name__ == "__main__":
