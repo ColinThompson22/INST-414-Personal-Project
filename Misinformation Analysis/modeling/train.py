@@ -18,7 +18,7 @@ import statsmodels.api as sm
 from statsmodels.formula.api import poisson
 df['user_verified'] = df['user_verified'].astype(int)
 poisson_model = poisson('favorites ~ user_verified', data=df).fit()
-print(poisson_model.summary())
+
 
 
 if __name__ == "__main__":
